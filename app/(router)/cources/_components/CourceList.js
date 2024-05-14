@@ -54,7 +54,7 @@ const CourceList = () => {
       {/* courceLists view */}
       <div className='grid grid-cols-2 lg:grid-cols-3 gap-4 mt-4'>
        {CourceList.length>0 ?CourceList.map((item,index)=>(
-       <Link href={'/cource-preview/'+item.slug}>  <div key={index}>
+       <Link key={index} href={'/cource-preview/'+item.slug}>  <div key={index}>
             <CourceItem cource={item}/>
           </div></Link> 
         )):[1,2,3,4,5,6,7].map((item,index)=>(

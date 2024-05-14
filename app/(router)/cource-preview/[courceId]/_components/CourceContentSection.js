@@ -16,7 +16,7 @@ const CourceContentSection = ({courceinfo,isUserEnrolled,watchMode=false,activeC
         Contents
         </h2>
         {courceinfo.chapter.map((item,index)=>(
-            <div>
+            <div key={index}>
                 <h2 className={`p-2 m-2 text-[14px] flex justify-between items-center
                 border rounded-sm px-4 cursor-pointer hover:bg-gray-200 hover:text-gray-500 ${activeIndex==index&&'bg-primary text-white'}
                 ${isUserEnrolled&&'hover:bg-primary hover:text-white'}

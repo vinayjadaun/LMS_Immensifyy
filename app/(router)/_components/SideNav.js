@@ -14,7 +14,7 @@ const SideNav = () => {
     const {user}=useUser();
     const menu=[ 
         {
-            id:6,
+            id:0,
             name:'Dashboard',
             icon:LayoutGrid,
             path:'/dashboard',
@@ -56,7 +56,7 @@ const SideNav = () => {
             path:'/newsletter',
             auth:true,
         }
-        ,
+        
     ]
   return (
     <div className='p-5 bg-white shadow-lg border h-screen'>
@@ -64,11 +64,12 @@ const SideNav = () => {
        <hr className='mt-7'></hr>
         <div className='mt-5'>
             {menu.map((item,index)=>item.auth&&(
-                <Link href={item.path}>
-                <div className={`flex gap-3 mt-2 p-3 rounded-sm text-[20px] items-center text-gray-500 
+               
+               <Link key={index} href={item.path}> <div className={`flex gap-3 mt-2 p-3 rounded-sm text-[20px] items-center text-gray-500 
                 cursor-pointer hover:bg-primary group hover:text-white transition-all ease-in-out duration-200 ${path.includes(item.path)&&'bg-primary rounded-md text-white'}`}>
-                    <item.icon className='group-hover:animate-bounce'/>
-                    <h2>{item.name}</h2>
+                     
+                    <item.icon  className='group-hover:animate-bounce'/>
+                    <h2 >{item.name}</h2>
                     </div></Link>
             ))}
         </div>
