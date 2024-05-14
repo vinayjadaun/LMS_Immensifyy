@@ -13,7 +13,7 @@ const Cources = () => {
        <CourceList/>
       </div>
       {/* right section */}
-      <div className='col-span-1 p-5 bg-white rounded-xl'>
+      <div className='col-span-1 p-5 sm:w-full w-[350px] bg-white rounded-xl'>
        <SideBanners/>
       </div>
     </div>
