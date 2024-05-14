@@ -1,19 +1,24 @@
 "use client"
 import { BadgeIcon, BellDot, BookOpen, GraduationCap, LayoutGrid, Mail, Menu, Option, Search, ShoppingBag } from 'lucide-react'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { UserButton, useUser } from '@clerk/nextjs'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { SearchContext } from '@/app/context/SearchContext'
 
 
 
 const Header = () => {
   const[mobileTrue,setMobileTrue]=useState(false);
   const {user,isLoaded}=useUser();
+  const {searchValue,SetSearchValue}=useContext(SearchContext);
   useEffect(()=>{
     console.log(mobileTrue);
   },[mobileTrue])
+  useEffect(()=>{
+    console.log(searchValue)
+  },[searchValue])
 
   // **addition in order to make navlink**
   const path=usePathname();
@@ -74,7 +79,10 @@ const Header = () => {
         {/* Search bar */}
         <div className='flex gap-2 border min-w-[50px]  rounded-md p-2'>
         <Search className='sm:h-4 h-4 sm:w-4 w-4'/>
-        <input className='outline-none min-w-[50px]' type='text' placeholder='search cources'/>
+        <input className='outline-none min-w-[50px]' 
+        onChange={(e)=>SetSearchValue(e.target.value)}
+        value={searchValue}
+        type='text' placeholder='search cources'/>
         </div>
             
             {/* Get started and bell icon */}

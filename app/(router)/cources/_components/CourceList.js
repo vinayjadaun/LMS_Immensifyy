@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect,useState } from 'react'
+import React, { useContext, useEffect,useState } from 'react'
 import CourceItem from './CourceItem';
 import Link from 'next/link';
 import {
@@ -10,6 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import GlobalApi from '../../../_services/GlobalApi';
+import { SearchContext } from '@/app/context/SearchContext';
 
 
 
@@ -17,7 +18,9 @@ import GlobalApi from '../../../_services/GlobalApi';
 
 
 const CourceList = () => {
-  const[CourceList,setCourceList]=useState([]);
+  const search="Vinay Jadaun Son of Chandrakanta jadaun";
+  const {searchValue,SetSearchValue}=useContext(SearchContext);
+    const[CourceList,setCourceList]=useState([]);
     useEffect(()=>{
         getAllCources();
     },[])
@@ -53,10 +56,13 @@ const CourceList = () => {
       </div>
       {/* courceLists view */}
       <div className='grid grid-cols-2 lg:grid-cols-3 gap-4 mt-4'>
-       {CourceList.length>0 ?CourceList.map((item,index)=>(
-       <Link key={index} href={'/cource-preview/'+item.slug}>  <div key={index}>
+       {CourceList.length>0 ?CourceList.filter((item)=>{
+        return search.toLowerCase()===''?item:item.name.toLowerCase().includes(searchValue)
+       }).map((item,index)=>(
+      
+        <Link key={index} href={'/cource-preview/'+item.slug}>  <div key={index}>
             <CourceItem cource={item}/>
-          </div></Link> 
+          </div></Link>
         )):[1,2,3,4,5,6,7].map((item,index)=>(
           <div key={index} className='w-full h-[240px] rounded-xl m-2 bg-slate-200 animate-pulse'>
 
