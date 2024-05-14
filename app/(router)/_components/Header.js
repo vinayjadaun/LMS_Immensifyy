@@ -79,7 +79,7 @@ const Header = () => {
             
             {/* Get started and bell icon */}
          <div className='flex items-center sm:gap-4 gap-1'>    
-            <BellDot onClick={()=>{setMobileTrue(!mobileTrue)}} className='text-gray-500 sm:p-0 p-0.5 sm:block hidden md:lg:absolute'/>
+            <BellDot onClick={()=>{setMobileTrue(!mobileTrue)}} className='text-gray-500 sm:p-0 p-0.5 sm:block hidden md:lg:xl:xxl:absolute'/>
             {isLoaded&&user? <UserButton afterSignOutUrl='/'/>: <Link href={'/sign-in'}><Button  className='sm:text-[15px] rounded-md text-white text-[8px] sm:py-3 py-1 sm:px-3 px-2'>Login</Button></Link>
           }
             <Menu onClick={()=>{setMobileTrue(!mobileTrue)}} className='h-7 w-7 sm:hidden block float-right'/>
@@ -89,8 +89,10 @@ const Header = () => {
 
 
 
-        <div className='flex items-center justify-center float-left bg-white absolute w-[320px] top-[70px]'>
-           <div className={`mt-5 bg-white z-10 h-screen rounded-md p-3 ${mobileTrue?'absolute left-[-1px] top-[-900px] transition-all ease-in-out 2s':'absolute top-[2px] left-[-10px]  transition-all ease-in-out 2000ms'}`}>
+       <div className='flexitems-center justify-center float-left bg-white absolute w-[320px] top-[70px]'>
+
+        
+           <div className={`mt-5 bg-white z-10 h-screen rounded-md p-3 ${!mobileTrue?'absolute left-[-1px] top-[-900px] transition-all ease-in-out 2s':'absolute top-[2px] left-[-10px]  transition-all ease-in-out 2000ms'}`}>
            {menu.map((item,index)=>item.auth&&(
               
               <Link key={index} href={item.path}> <div  onClick={()=>setMobileTrue(!mobileTrue)} className={`flex  w-[320px] border-[2px] mt-5 gap-5 p-2 rounded-sm text-[20px] items-center text-gray-500 
