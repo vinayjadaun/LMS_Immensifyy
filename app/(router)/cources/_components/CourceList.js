@@ -19,6 +19,7 @@ import { SearchContext } from '@/app/context/SearchContext';
 
 const CourceList = () => {
   const search="Vinay Jadaun Son of Chandrakanta jadaun";
+  
   const {searchValue,SetSearchValue}=useContext(SearchContext);
     const[CourceList,setCourceList]=useState([]);
     useEffect(()=>{
@@ -62,7 +63,9 @@ const CourceList = () => {
       
         <Link key={index} href={'/cource-preview/'+item.slug}>  <div key={index}>
             <CourceItem cource={item}/>
-          </div></Link>
+          </div></Link> 
+          
+      
         )):[1,2,3,4,5,6,7].map((item,index)=>(
           <div key={index} className='w-full h-[240px] rounded-xl m-2 bg-slate-200 animate-pulse'>
 

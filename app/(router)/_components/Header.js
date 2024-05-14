@@ -80,7 +80,7 @@ const Header = () => {
         <div className='flex gap-2 border min-w-[50px]  rounded-md p-2'>
         <Search className='sm:h-4 h-4 sm:w-4 w-4'/>
         <input className='outline-none min-w-[50px]' 
-        onChange={(e)=>SetSearchValue(e.target.value)}
+        onChange={(e)=>SetSearchValue(e.target.value.toLowerCase())}
         value={searchValue}
         type='text' placeholder='search cources'/>
         </div>
