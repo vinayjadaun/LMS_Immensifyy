@@ -5,7 +5,7 @@ import Header from './_components/Header'
 import { useSearchParams } from 'next/navigation'
 import { SearchContext } from '../context/SearchContext'
 
-const layout = ({children}) => {
+const Layout = ({children}) => {
   const [searchValue,SetSearchValue]=useState([]);
   return (
     
@@ -21,4 +21,4 @@ const layout = ({children}) => {
   )
 }
 
-export default layout
+export default Layout
