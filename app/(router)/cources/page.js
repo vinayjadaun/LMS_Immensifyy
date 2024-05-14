@@ -14,7 +14,7 @@ const Cources = () => {
       </div>
       {/* right section */}
       
-      <div className='col-span-1 p-5  w-[320px] items-center bg-white rounded-xl'>
+      <div className='col-span-1 p-5 w-[320px] items-center bg-white rounded-xl'>
        <SideBanners/>
       </div>
     </div>
