@@ -93,7 +93,7 @@ const Header = () => {
            <div className={`mt-5 bg-white z-10 h-screen rounded-md p-3 ${mobileTrue?'absolute left-[-1px] top-[-900px] transition-all ease-in-out 2s':'absolute top-[2px] left-[-10px]  transition-all ease-in-out 2000ms'}`}>
            {menu.map((item,index)=>item.auth&&(
               
-              <Link onClick={()=>setMobileTrue(false)} key={index} href={item.path}> <div className={`flex  w-[320px] border-[2px] mt-5 gap-5 p-2 rounded-sm text-[20px] items-center text-gray-500 
+              <Link key={index} href={item.path}> <div  onClick={()=>setMobileTrue(!mobileTrue)} className={`flex  w-[320px] border-[2px] mt-5 gap-5 p-2 rounded-sm text-[20px] items-center text-gray-500 
                cursor-pointer hover:bg-primary group hover:text-white transition-all ease-in-out duration-200 ${path.includes(item.path)&&'bg-primary rounded-md text-white'}`}>
                     
                    <item.icon  className='group-hover:animate-bounce'/>
