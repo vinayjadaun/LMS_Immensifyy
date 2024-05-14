@@ -6,7 +6,7 @@ import CourceVideoDescription from '../../cource-preview/[courceId]/_components/
 import CourceContentSection from '../../cource-preview/[courceId]/_components/CourceContentSection'
 import { toast } from 'sonner'
 
-const page = ({params}) => {
+const WatchCource = ({params}) => {
   const {user}=useUser();
   const [activeChapter,setActivechapter]=useState(0);
   const[completedChapter,setCompletedChapter]=useState();
@@ -55,4 +55,4 @@ const page = ({params}) => {
   )
 }
 
-export default page
+export default WatchCource

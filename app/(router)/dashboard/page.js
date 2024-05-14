@@ -9,7 +9,7 @@ import InProgressCourceList from './_components/InProgressCourceList.js'
 import GlobalApi from '@/app/_services/GlobalApi.js'
 import { User } from 'lucide-react'
 
-const dashboard = () => {
+const Dashboard = () => {
   const[UserAllEnrolledCources,setUserAllEnrolledCources]=useState();
   useEffect(()=>{
     setUserAllEnrolledCources(UserAllEnrolledCources)
@@ -42,4 +42,4 @@ const dashboard = () => {
   )
 }
 
-export default dashboard
+export default Dashboard

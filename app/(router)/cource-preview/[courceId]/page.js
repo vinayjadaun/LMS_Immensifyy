@@ -7,14 +7,16 @@ import CourceEnrollSection from './_components/CourceEnrollSection'
 import CourceContentSection from './_components/CourceContentSection'
 import { useUser } from '@clerk/nextjs'
 
-const page = ({params}) => {
+const CourcePreview = ({params}) => {
   const [courceVideo,setCourceVideo]=useState();
   const {user}=useUser();
   const [isUserEnrolled,setIsUserEnrolled]=useState();
+
   useEffect(()=>{
       params&&getCourceInfoById();
   },[params]);
-useEffect(()=>{
+
+    useEffect(()=>{
       courceVideo&&user&&checkUserEnrolledCource()
 },[courceVideo,user])
 
@@ -23,9 +25,11 @@ useEffect(()=>{
       //  setVideoUrl(VideoUrl);
        console.log(courceVideo);
   },[courceVideo]);
+
 useEffect(()=>{
   console.log(isUserEnrolled);
 },[isUserEnrolled])
+
   const getCourceInfoById=()=>{
       GlobalApi.getCourceById(params?.courceId).then(resp=>{
         console.log(resp);
@@ -67,4 +71,4 @@ useEffect(()=>{
   )
 }
 
-export default page
+export default CourcePreview
