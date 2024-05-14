@@ -35,7 +35,7 @@ const Dashboard = () => {
       
      </div>
      {/* right section */}
-     <div className='col-span-1 p-5 bg-white rounded-xl'>
+     <div className='col-span-1 w-[320px] p-5 bg-white rounded-xl'>
       <SideBanners/>
      </div>
    </div>
