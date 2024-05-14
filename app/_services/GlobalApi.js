@@ -195,7 +195,7 @@ const getSideBanner=async()=>{
  const getAllUserEnrolledCources=async(id)=>{
   const query=gql`
   query MyQuery {
-    userEnrollCources(where: {userEmail: "vinay11112003@gmail.com"}) {
+    userEnrollCources(where: {userEmail: "`+id+`"}) {
       completedChapter {
         ... on CompletedChapter {
           id
