@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 
 const VideoPlayer = ({videourl,banner}) => {
     useEffect(()=>{
-          console.log(videourl)
-    },[])
+          console.log(videourl,banner)
+    },[videourl,banner])
   return (
     <video
     width={1000}

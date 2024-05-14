@@ -1,3 +1,4 @@
+"use client"
 import GlobalApi from '@/app/_services/GlobalApi';
 import { Button } from '@/components/ui/button'
 import { useUser } from '@clerk/nextjs';
