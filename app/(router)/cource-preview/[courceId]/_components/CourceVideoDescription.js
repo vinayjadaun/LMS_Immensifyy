@@ -10,7 +10,7 @@ const CourceVideoDescription = ({courceinfo,activeChapter,watchMode=false,setCha
   return (
     <div>
         <h2 className='text-[20px] font-semibold'>{courceinfo.name}</h2>
-        <h2 className='text-gray-500 text-[14px]'>{courceinfo.auther}</h2>
+        <h2 className='text-gray-500 my-3 text-[14px]'>{courceinfo.auther}</h2>
         <VideoPlayer videourl={courceinfo?.chapter[activeChapter]?.video?.url} banner={!watchMode?courceinfo.banner.url:null}/>
         <h2 className='mt-5 text-[17px] font-semibold'>{watchMode?<span className='flex sm:flex-row flex-col justify-between items-center'>{courceinfo?.chapter[activeChapter]?.name}
         <Button className='text-white' onClick={()=>setChapterCompleted(courceinfo?.chapter[activeChapter]?.id)}>Mark Completed</Button>

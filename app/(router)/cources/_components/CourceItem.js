@@ -6,7 +6,7 @@ const CourceItem = ({cource}) => {
     <div className='border rounded-xl hover:shadow-md hover:shadow-purple-300 cursor-pointer'>
         <Image src={cource?.banner?.url} height={150} width={500} alt='banner' className='rounded-t-xl'/>
         <div className='flex flex-col gap-1 p-2'>
-            <h2 className='font-medium'>{cource.name}</h2>
+            <h2 className='font-medium sm:text-[17px] text-[14px]'>{cource.name}</h2>
             <h2 className='text-[12px] text-gray-400'>{cource.auther}</h2>
             { cource.chapter.length==0?
             <div className='flex gap-2'>

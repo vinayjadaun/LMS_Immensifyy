@@ -19,9 +19,12 @@ import { SearchContext } from '@/app/context/SearchContext';
 
 const CourceList = () => {
   const search="Vinay Jadaun Son of Chandrakanta jadaun";
-  
+  const[filter,setfilter]=useState();
   const {searchValue,SetSearchValue}=useContext(SearchContext);
     const[CourceList,setCourceList]=useState([]);
+    useEffect(()=>{
+      console.log(filter)
+    },[])
     useEffect(()=>{
         getAllCources();
     },[])
@@ -45,12 +48,14 @@ const CourceList = () => {
          <h2 className='tex-[20px] font-bold text-primary'>ALL COURCES</h2>
          <Select>
   <SelectTrigger className="w-[180px]">
-    <SelectValue placeholder="Filter" />
+    <SelectValue placeholder="FILTER" />
   </SelectTrigger>
   <SelectContent>
-    <SelectItem value="light">Light</SelectItem>
-    <SelectItem value="dark">Dark</SelectItem>
-    <SelectItem value="system">System</SelectItem>
+    <SelectItem value='ALL' >ALL</SelectItem>
+    <SelectItem value='Paid'>Paid</SelectItem>
+    <SelectItem value='Free'>
+      Free
+    </SelectItem>
   </SelectContent>
 </Select>
 

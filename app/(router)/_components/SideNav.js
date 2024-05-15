@@ -60,7 +60,7 @@ const SideNav = () => {
     ]
   return (
     <div className='p-5 bg-white shadow-lg border h-screen'>
-        <Image src='/next.svg' alt="next.svg" height={200} width={100}/>
+        <Image src='/Screenshot 2024-05-15 212404.png' alt="next.svg" height={200} width={300}/>
        <hr className='mt-7'></hr>
         <div className='mt-5'>
             {menu.map((item,index)=>item.auth&&(
