@@ -34,7 +34,7 @@ const WatchCource = ({params}) => {
     GlobalApi.markcompletedchapter(params.enrollId,chapterId).then(resp=>{
       console.log(resp)
       if(resp){
-        toast('chapter compled');
+        toast('✔ Marked Completed');
         getUserenrolledCources();
       }
     })

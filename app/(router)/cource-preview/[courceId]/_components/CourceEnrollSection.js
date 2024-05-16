@@ -22,7 +22,7 @@ const CourceEnrollSection = ({courceinfo,isUserEnrolled}) => {
 
       // show toast on success
       console.log("enrolled")
-      toast("Successfully Enrolled",{
+      toast("✔ Successfully Enrolled",{
         description:"enrolled",}
       );
       console.log(courceinfo?.slug,user?.primaryEmailAddress?.emailAddress)
