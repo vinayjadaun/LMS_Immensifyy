@@ -4,11 +4,16 @@ import SideNav from './_components/SideNav'
 import Header from './_components/Header'
 import { useSearchParams } from 'next/navigation'
 import { SearchContext } from '../context/SearchContext'
+import { Membership } from '../context/MembershipContext'
+import { IsmemberContext } from '../context/IsmemberContext'
 
 const Layout = ({children}) => {
   const [searchValue,SetSearchValue]=useState([]);
+  const [membershipid,SetMembershipid]=useState([]);
+  const [Ismember,SetIsmember]=useState(false);
   return (
-    
+    <IsmemberContext.Provider value={{Ismember,SetIsmember}}>
+    <Membership.Provider value={{membershipid,SetMembershipid}}>
   <SearchContext.Provider value={{searchValue,SetSearchValue}}>
     <div>
       <div className='sm:w-64 sm:block hidden fixed'>
@@ -16,7 +21,8 @@ const Layout = ({children}) => {
 
     <div className='sm:ml-64'>
         <Header/>
-       {children}</div> </div></SearchContext.Provider>
+       {children}</div> </div></SearchContext.Provider></Membership.Provider>
+       </IsmemberContext.Provider>
 
   )
 }

@@ -3,9 +3,9 @@ import { useUser } from '@clerk/nextjs'
 import React, { useEffect, useState } from 'react'
 // import Banner from '../cources/_components/Banner'
 
-import DashboardBanner from './_components/DashboardBanner.js'
+import DashboardBanner from '../Live/_components/DashboardBanner.js'
 import SideBanners from '../cources/_components/SideBanners.js'
-import InProgressCourceList from './_components/InProgressCourceList.js'
+import InProgressCourceList from '../Live/_components/InProgressCourceList.js'
 import GlobalApi from '@/app/_services/GlobalApi.js'
 import { User } from 'lucide-react'
 
