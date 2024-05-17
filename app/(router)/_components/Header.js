@@ -34,7 +34,7 @@ const Header = () => {
 
   const checkmemberships=()=>{
     GlobalApi.Checkformembership(user?.primaryEmailAddress?.emailAddress).then(resp=>{
-         if(resp){
+         if(resp.memberships[0]){
           SetIsmember(true);
           console.log(resp.memberships[0]);
          
