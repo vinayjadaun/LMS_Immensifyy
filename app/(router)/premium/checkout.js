@@ -1,19 +1,35 @@
+import GlobalApi from '@/app/_services/GlobalApi';
 import { IsmemberContext } from '@/app/context/IsmemberContext';
 import { Membership } from '@/app/context/MembershipContext';
+import { useUser } from '@clerk/nextjs';
+
 import { useStripe,useElements,Elements,PaymentElement } from '@stripe/react-stripe-js'
 import { useRouter } from 'next/navigation';
 import React, { useContext, useEffect, useState } from 'react'
 
 // import { SelectedCarAmount } from "@/app/context/SelectedCarAmount";
 const CheckOutForm = ({amount}) => {
+  const{user}=useUser();
   const{membershipid,SetMembershipid}=useContext(Membership);
-  const{Ismember,SetIsmember}=useContext(IsmemberContext);
+
+  const addNewMember=(email,id)=>{
+    GlobalApi.Addnewmember(email,id).then(resp=>{
+         if(resp){
+          console.log(resp);
+         
+         }else{
+          console.log("setting to false")
+         }
+         
+    })
+  }
   useEffect(()=>{
    SetMembershipid(membershipid)
-    console.log(membershipid)
-    SetIsmember(Ismember)
-    console.log(Ismember);
-  },[membershipid,Ismember])
+   console.log(membershipid);
+  
+
+  
+  },[membershipid])
   const router=useRouter();
   // const{caramount,setCarAmount}=useContext(SelectedCarAmount);
   const stripe=useStripe();
@@ -78,7 +94,10 @@ const CheckOutForm = ({amount}) => {
           router.push('/success');
           console.log(result.error.payment_intent.id)
           SetMembershipid(result.error.payment_intent.id);
-          SetIsmember(true);
+         
+          addNewMember(user.primaryEmailAddress.emailAddress,membershipid);
+         
+         
          
           // Your customer will be redirected to your `return_url`. For some payment
           // methods like iDEAL, your customer will be redirected to an intermediate

@@ -229,6 +229,39 @@ const getSideBanner=async()=>{
   const result =request(MASTER_URL,query);
   return result
  }
+
+ const Addnewmember=async(email,id)=>{
+  const query=gql`
+  mutation MyMutation {
+    createMembership(
+      data: {active: true, email: "`+email+`", paymentId: "`+id+`"}
+    ) {
+      id
+    
+    }
+    publishManyMemberships(to: PUBLISHED) {
+      count
+    }
+  }
+  `
+  const result=await request(MASTER_URL,query);
+  return result;
+}
+
+const Checkformembership=async(email)=>{
+  const query=gql`
+  query MyQuery {
+    memberships(where: {email: "`+email+`"}) {
+      createdAt
+      active
+      id
+      paymentId
+    }
+  }
+  `
+  const result=await request(MASTER_URL,query);
+  return result;
+}
 export default{
     getAllCourcesList,
     getSideBanner,
@@ -237,5 +270,7 @@ export default{
     checkEnrolledtoCource,
     getUserEnrollCource,
     markcompletedchapter,
-    getAllUserEnrolledCources
+    getAllUserEnrolledCources,
+    Addnewmember,
+    Checkformembership
 }
