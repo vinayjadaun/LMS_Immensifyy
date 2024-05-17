@@ -12,12 +12,16 @@ export default function Home() {
   const {user,isSignedIn,isLoaded}=useUser();
 
   useEffect(()=>{
+    
       if(user){
         router.push('/dashboard');
+        
       }else{
         isLoaded&&router.push('/cources')
       }
   },[user])
+
+ 
   return (
   <div>hello
     <UserButton afterSignOutUrl="/"/>

@@ -1,6 +1,8 @@
 "use client"
+import GlobalApi from '@/app/_services/GlobalApi'
 import { IsmemberContext } from '@/app/context/IsmemberContext'
 import { Membership } from '@/app/context/MembershipContext'
+import { useUser } from '@clerk/nextjs'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import React, { useContext, useEffect } from 'react'
@@ -9,6 +11,7 @@ const Page = () => {
   const router = useRouter();
   const{membershipid,SetMembershipid}=useContext(Membership);
   const{Ismember,SetIsmember}=useContext(IsmemberContext);
+  const{user}=useUser();
   const caramount=5;
   useEffect(()=>{
     if(Ismember){
@@ -17,6 +20,21 @@ const Page = () => {
       console.log('You are not a member yet')
     }
   },[]);
+  // useEffect(()=>{
+  //   user&&checkmemberships();
+  // },[user])
+  // const checkmemberships=()=>{
+  //   GlobalApi.Checkformembership(user?.primaryEmailAddress?.emailAddress).then(resp=>{
+  //        if(resp){
+  //         SetIsmember(true);
+  //         console.log(resp.memberships[0]);
+         
+  //        }else{
+  //         console.log("setting to false")
+  //        }
+         
+  //   })
+  // }
 
   return (
     

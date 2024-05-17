@@ -8,6 +8,7 @@ import { Membership } from '../context/MembershipContext'
 import { IsmemberContext } from '../context/IsmemberContext'
 import { useUser } from '@clerk/nextjs'
 import GlobalApi from '../_services/GlobalApi'
+import { Island_Moments } from 'next/font/google'
 
 const Layout = ({children}) => {
   const [searchValue,SetSearchValue]=useState([]);
@@ -19,21 +20,7 @@ const Layout = ({children}) => {
     SetIsmember(Ismember)
   },[Ismember])
 
-  const checkmemberships=()=>{
-    GlobalApi.Checkformembership(user.primaryEmailAddress.emailAddress).then(resp=>{
-         if(resp){
-          SetIsmember(true);
-          console.log(resp.memberships[0]);
-         
-         }else{
-          console.log("setting to false")
-         }
-         
-    })
-  }
-  useState(()=>{
-    checkmemberships()
-  },[isLoaded])
+
   return (
     <IsmemberContext.Provider value={{Ismember,SetIsmember}}>
     <Membership.Provider value={{membershipid,SetMembershipid}}>

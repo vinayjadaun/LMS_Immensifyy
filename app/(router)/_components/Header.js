@@ -6,6 +6,8 @@ import { UserButton, useUser } from '@clerk/nextjs'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { SearchContext } from '@/app/context/SearchContext'
+import GlobalApi from '@/app/_services/GlobalApi'
+import { IsmemberContext } from '@/app/context/IsmemberContext'
 
 
 
@@ -13,6 +15,7 @@ const Header = () => {
   const[mobileTrue,setMobileTrue]=useState(false);
   const {user,isLoaded}=useUser();
   const {searchValue,SetSearchValue}=useContext(SearchContext);
+  const {Ismember,SetIsmember}=useContext(IsmemberContext);
   useEffect(()=>{
     console.log(mobileTrue);
   },[mobileTrue])
@@ -21,10 +24,26 @@ const Header = () => {
   },[searchValue])
 
   // **addition in order to make navlink**
+  useEffect(()=>{
+    user&&checkmemberships();
+  },[user])
   const path=usePathname();
   useEffect(()=>{
       console.log("path",path)
   },[path])
+
+  const checkmemberships=()=>{
+    GlobalApi.Checkformembership(user?.primaryEmailAddress?.emailAddress).then(resp=>{
+         if(resp){
+          SetIsmember(true);
+          console.log(resp.memberships[0]);
+         
+         }else{
+          console.log("setting to false")
+         }
+         
+    })
+  }
 
  
   const menu=[ 
