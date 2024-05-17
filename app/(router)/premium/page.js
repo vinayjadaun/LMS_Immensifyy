@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import React, { useContext, useEffect } from 'react'
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const{membershipid,SetMembershipid}=useContext(Membership);
   const{Ismember,SetIsmember}=useContext(IsmemberContext);
@@ -458,4 +458,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
