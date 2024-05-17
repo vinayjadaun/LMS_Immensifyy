@@ -61,7 +61,7 @@ const CourceList = () => {
 
       </div>
       {/* courceLists view */}
-      <div className='grid grid-cols-2 lg:grid-cols-3 gap-4 mt-4'>
+      <div className='grid grid-cols-2 lg:grid-cols-3 gap-4 mt-7'>
        {CourceList.length>0 ?CourceList.filter((item)=>{
         return search.toLowerCase()===''?item:item.name.toLowerCase().includes(searchValue)
        }).map((item,index)=>(

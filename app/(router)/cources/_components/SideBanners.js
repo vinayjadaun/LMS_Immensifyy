@@ -23,9 +23,9 @@ const SideBanners = () => {
         })
     }
   return (
-    <div className='flex flex-col gap-2'>{sideBanners.map((item,index)=>(
+    <div className='flex flex-col gap-2 justify-center items-center'>{sideBanners.map((item,index)=>(
         <div key={index}>
-            <Image src={item.banner.url} height={300} width={500} onClick={()=>window.open(item.url)} alt="hellobanner" className='rounded-xl cursor-pointer' />
+            <Image src={item.banner.url} height={200} width={700} onClick={()=>window.open(item.url)} alt="hellobanner" className='rounded-xl cursor-pointer' />
         </div>
     ))}</div>
   )
