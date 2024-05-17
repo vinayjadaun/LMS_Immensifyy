@@ -1,11 +1,12 @@
 "use client"
 import GlobalApi from '@/app/_services/GlobalApi';
+import { IsmemberContext } from '@/app/context/IsmemberContext';
 import { Button } from '@/components/ui/button'
 import { useUser } from '@clerk/nextjs';
 import { Source_Sans_3 } from 'next/font/google';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { toast } from 'sonner';
 
 const CourceEnrollSection = ({courceinfo,isUserEnrolled}) => {
@@ -14,6 +15,7 @@ const CourceEnrollSection = ({courceinfo,isUserEnrolled}) => {
           console.log("userenrolled"+isUserEnrolled)
   },[isUserEnrolled])
   const {user}=useUser();
+  const {Ismember,SetIsmember}=useContext(IsmemberContext);
   const router=useRouter();
   const enrollCource=()=>{
     GlobalApi.enrolltocource(courceinfo.slug,user?.primaryEmailAddress?.emailAddress).then(resp=>{
@@ -43,7 +45,7 @@ const CourceEnrollSection = ({courceinfo,isUserEnrolled}) => {
       <h2 className='text-[22px] font-bold text-white'>Enroll To The Cource</h2>
        {/* user has membership and already login */}
      
-     {user&&(membership || courceinfo.free)&&!isUserEnrolled?<div><h2 className='text-white font-light'>Enroll Now to Start Learning and Building Project</h2>
+     {user&&(Ismember || courceinfo.free)&&!isUserEnrolled?<div><h2 className='text-white font-light'>Enroll Now to Start Learning and Building Project</h2>
 <Button 
 onClick={()=>enrollCource()} 
 className='bg-white text-w-fullprimary mt-3 hover:bg-white hover:text-primary'>
@@ -53,7 +55,7 @@ className='bg-white text-w-fullprimary mt-3 hover:bg-white hover:text-primary'>
        :!isUserEnrolled&&
       // user does not have membership or login 
       <div> <h2 className='text-white font-light'>Buy the membership to access the cource </h2>
-      <Button className='bg-white text-primary mt-3 hover:bg-white w-full hover:text-primary'>Buy Now 5$</Button></div>
+      <Link href={'/premium'}><Button className='bg-white text-primary mt-3 hover:bg-white w-full hover:text-primary'  >Buy Now 5$</Button></Link></div>
       
       }
       {isUserEnrolled&&<div> <h2 className='text-white font-light'>Continue to watch the cource </h2>
