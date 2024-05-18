@@ -261,7 +261,7 @@ const Page = () => {
       <div className="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
         <h2 className="text-3xl font-bold sm:text-4xl">Find your career path</h2>
 
-        <p className="mt-4 text-gray-600">
+        <p className="mt-4 text-gray-600 sm:text-[15px] text-[10px]">
         Welcome to your Subscription Account Page! Here, you can manage all aspects of your subscription with ease. This page is designed to give you full control over your subscription details, billing information, and preferences. Whether you need to update your payment method, review your billing history, or make changes to your subscription plan, everything you need is right at your fingertips.
         </p>
 
