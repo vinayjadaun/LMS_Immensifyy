@@ -262,16 +262,14 @@ const Page = () => {
         <h2 className="text-3xl font-bold sm:text-4xl">Find your career path</h2>
 
         <p className="mt-4 text-gray-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut vero aliquid sint distinctio
-          iure ipsum cupiditate? Quis, odit assumenda? Deleniti quasi inventore, libero reiciendis
-          minima aliquid tempora. Obcaecati, autem.
+        Welcome to your Subscription Account Page! Here, you can manage all aspects of your subscription with ease. This page is designed to give you full control over your subscription details, billing information, and preferences. Whether you need to update your payment method, review your billing history, or make changes to your subscription plan, everything you need is right at your fingertips.
         </p>
 
         <a
-          href="#"
+          href="/cources"
           className="mt-8 inline-block rounded bg-primary px-12 py-3 text-sm font-medium text-white transition hover:bg-primary focus:outline-none focus:ring focus:ring-primary"
         >
-          Get Started Today
+          Continue Learning
         </a>
       </div>
      
@@ -302,10 +300,10 @@ const Page = () => {
             </svg>
           </span>
          
-          <h2 className="mt-2 font-bold">Accountant</h2>
+          <h2 className="mt-2 font-bold">Membership Type</h2>
 
-          <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-            Lorem ipsum dolor sit amet consectetur.
+          <p className=" sm:mt-1 sm:block font-semibold sm:text-sm sm:text-green-500">
+            Premium
           </p>
         </a>
 
@@ -336,7 +334,7 @@ const Page = () => {
 
           <h2 className="mt-2 font-bold">MemberShip Status</h2>
 
-          <p className="hidden sm:mt-1 sm:block font-bold sm:text-sm sm:text-green-500">
+          <p className=" sm:mt-1 sm:block font-semibold sm:text-sm sm:text-green-500">
             Active
           </p>
         </a>
@@ -366,10 +364,10 @@ const Page = () => {
             </svg>
           </span>
 
-          <h2 className="mt-2 font-bold">Accountant</h2>
+          <h2 className="mt-2 font-bold">Full Access</h2>
 
-          <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-            Lorem ipsum dolor sit amet consectetur.
+          <p className=" sm:mt-1 sm:block sm:text-sm sm:text-green-500 font-semibold">
+            1000+ cources
           </p>
         </a>
 
@@ -398,10 +396,10 @@ const Page = () => {
             </svg>
           </span>
 
-          <h2 className="mt-2 font-bold">Accountant</h2>
+          <h2 className="mt-2 font-bold">Live Session Access</h2>
 
-          <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-            Lorem ipsum dolor sit amet consectetur.
+          <p className="  sm:mt-1 sm:block sm:text-sm sm:text-green-500 font-semibold">
+            Active
           </p>
         </a>
 
@@ -430,10 +428,10 @@ const Page = () => {
             </svg>
           </span>
 
-          <h2 className="mt-2 font-bold">Accountant</h2>
+          <h2 className="mt-2 font-bold">Newsletter Premium</h2>
 
-          <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-            Lorem ipsum dolor sit amet consectetur.
+          <p className=" sm:mt-1 sm:block sm:text-sm sm:text-green-500 font-semibold">
+            Active
           </p>
         </a>
 
@@ -462,10 +460,10 @@ const Page = () => {
             </svg>
           </span>
 
-          <h2 className="mt-2 font-bold">Accountant</h2>
+          <h2 className="mt-2 font-bold">Support 24*7</h2>
 
-          <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-            Lorem ipsum dolor sit amet consectetur.
+          <p className="  sm:mt-1 sm:block sm:text-sm sm:text-green-500 font-semibold">
+      Active
           </p>
         </a>
       </div>
