@@ -12,11 +12,11 @@ const CourceContentSection = ({courceinfo,isUserEnrolled,watchMode=false,activeC
       
     }
   return (
-    <div className='p-3 bg-white rounded-sm mt-3'><h2>
+    <div className='sm:p-3 p-0 bg-white rounded-sm mt-5 font-semibold'><h2>
         Contents
         </h2>
         {courceinfo.chapter.map((item,index)=>(
-            <div key={index}>
+            <div key={index} className='p-0'>
                 <h2 className={`p-2 m-2 text-[14px] flex justify-between items-center
                 border rounded-sm px-4 cursor-pointer hover:bg-gray-200 hover:text-gray-500 ${activeIndex==index&&'bg-primary text-white'}
                 ${isUserEnrolled&&'hover:bg-primary hover:text-white'}

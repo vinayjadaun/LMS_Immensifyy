@@ -11,7 +11,7 @@ const InProgressCourceList = ({UserAllEnrolledCources}) => {
     const search="Vinay Jadaun Son of Chandrakanta jadaun"
 
   return UserAllEnrolledCources&& (
-    <div className='bg-white p-5 mt-3 rounded-sm'>
+    <div className='bg-white p-5 sm:mt-3 mt-2 rounded-sm'>
         <h2 className='text-primary text-[18px] font-semibold'>Recent Enrolled Cources</h2>
         <div className='grid grid-cols-1 mt-3 md:grid-cols-3 gap-5'>
            {UserAllEnrolledCources.filter((item)=>{

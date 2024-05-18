@@ -6,7 +6,7 @@ import SideBanners from './_components/SideBanners'
 
 const Cources = () => {
   return (
-    <div className='grid sm:grid-cols-4 grid-cols-1 sm:p-5 p-2 gap-5'>
+    <div className='grid sm:grid-cols-4 grid-cols-1 sm:p-5 p-2 sm:gap-5 gap-2'>
      {/* left section */}
       <div className='col-span-3'>
        <Banner/>

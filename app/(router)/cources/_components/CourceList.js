@@ -42,12 +42,12 @@ const CourceList = () => {
         })
     }
   return (
-    <div className='p-5 bg-white rounded-lg mt-5'>
+    <div className='p-5 bg-white rounded-lg sm:mt-5 mt-2'>
       {/* Title and filter */}
       <div className='flex items-center justify-between'>
          <h2 className='tex-[20px] font-bold text-primary'>ALL COURCES</h2>
          <Select>
-  <SelectTrigger className="w-[180px]">
+  <SelectTrigger className="sm:w-[180px] w-[90px] lg:md:xl:xxl:h-[30px]">
     <SelectValue placeholder="FILTER" />
   </SelectTrigger>
   <SelectContent>

@@ -40,13 +40,13 @@ const WatchCource = ({params}) => {
     })
   }
   return enrolldata&& (
-    <div className='grid grid-cols-1 md:grid-cols-3 p-5 gap-3'>
+    <div className='grid grid-cols-1 md:grid-cols-3 sm:p-5 p-2 sm:gap-3 gap-2'>
           {/* video title and description */}
           <div className='col-span-2 bg-white p-3'>
            <CourceVideoDescription courceinfo={enrolldata} activeChapter={activeChapter} watchMode={true}  setChapterCompleted={(chapterId)=>completedChapters(chapterId)}  />
           </div>
           {/* courcecontent */}
-          <div>
+          <div className='col-span-1 min-w-[345px] bg-white sm:p-3 p-2'>
           
           <CourceContentSection courceinfo={enrolldata} isUserEnrolled={true} watchMode={true}  activeChapterIndex={(index)=>{console.log(index),setActivechapter(index)}} completedChapter={completedChapter}/>
           

@@ -42,7 +42,7 @@ const Dashboard = () => {
   //   })
   // }
   return getUserEnrolledCources&&(
-    <div className='grid sm:grid-cols-4 grid-cols-1 sm:p-5 p-2 gap-5'>
+    <div className='grid sm:grid-cols-4 grid-cols-1 sm:p-5 p-2 sm:gap-5 gap-2'>
     {/* left section */}
      <div className='col-span-3'>
       <DashboardBanner/>
@@ -50,7 +50,7 @@ const Dashboard = () => {
       
      </div>
      {/* right section */}
-     <div className='col-span-1 w-[320px] p-5 bg-white rounded-xl'>
+     <div className='col-span-1 sm:w-[320px] w-[350px] p-5 bg-white rounded-xl'>
       <SideBanners/>
      </div>
    </div>
