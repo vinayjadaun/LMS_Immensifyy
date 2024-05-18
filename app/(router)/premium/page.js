@@ -243,7 +243,10 @@ const Page = () => {
       </a>
     </div>
   </div>
-</div>:<div className='bg-white'>
+</div>:
+
+
+<div className='bg-white'>
   
   
   {/*
@@ -266,7 +269,7 @@ const Page = () => {
 
         <a
           href="#"
-          className="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+          className="mt-8 inline-block rounded bg-primary px-12 py-3 text-sm font-medium text-white transition hover:bg-primary focus:outline-none focus:ring focus:ring-primary"
         >
           Get Started Today
         </a>
