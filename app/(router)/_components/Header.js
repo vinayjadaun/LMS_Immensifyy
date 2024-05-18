@@ -106,7 +106,7 @@ const Header = () => {
             
             {/* Get started and bell icon */}
          <div className='flex items-center sm:gap-4 gap-1'>    
-            <BellDot onClick={()=>{setMobileTrue(!mobileTrue)}} className='text-gray-500 sm:p-0 p-0.5 sm:block hidden md:lg:xl:xxl:absolute'/>
+            <BellDot className='text-gray-500 sm:p-0 p-0.5 sm:block hidden md:lg:xl:xxl:absolute'/>
             {isLoaded&&user? <UserButton afterSignOutUrl='/'/>: <Link href={'/sign-in'}><Button  className='sm:text-[15px] rounded-md text-white text-[8px] sm:py-3 py-1 sm:px-3 px-2'>Login</Button></Link>
           }
             <Menu onClick={()=>{setMobileTrue(!mobileTrue)}} className='h-7 w-7 sm:hidden block float-right'/>

@@ -302,7 +302,7 @@ const Page = () => {
          
           <h2 className="mt-2 font-bold">Membership Type</h2>
 
-          <p className=" sm:mt-1 sm:block font-semibold sm:text-sm sm:text-green-500">
+          <p className=" mt-1 block font-semibold text-sm text-green-500">
             Premium
           </p>
         </a>
@@ -334,7 +334,7 @@ const Page = () => {
 
           <h2 className="mt-2 font-bold">MemberShip Status</h2>
 
-          <p className=" sm:mt-1 sm:block font-semibold sm:text-sm sm:text-green-500">
+          <p className=" mt-1 block font-semibold text-sm text-green-500">
             Active
           </p>
         </a>
@@ -366,7 +366,7 @@ const Page = () => {
 
           <h2 className="mt-2 font-bold">Full Access</h2>
 
-          <p className=" sm:mt-1 sm:block sm:text-sm sm:text-green-500 font-semibold">
+          <p className=" mt-1 block font-semibold text-sm text-green-500">
             1000+ cources
           </p>
         </a>
@@ -398,7 +398,7 @@ const Page = () => {
 
           <h2 className="mt-2 font-bold">Live Session Access</h2>
 
-          <p className="  sm:mt-1 sm:block sm:text-sm sm:text-green-500 font-semibold">
+          <p className="mt-1 block font-semibold text-sm text-green-500">
             Active
           </p>
         </a>
@@ -430,7 +430,7 @@ const Page = () => {
 
           <h2 className="mt-2 font-bold">Newsletter Premium</h2>
 
-          <p className=" sm:mt-1 sm:block sm:text-sm sm:text-green-500 font-semibold">
+          <p className=" mt-1 block font-semibold text-sm text-green-500">
             Active
           </p>
         </a>
@@ -462,7 +462,7 @@ const Page = () => {
 
           <h2 className="mt-2 font-bold">Support 24*7</h2>
 
-          <p className="  sm:mt-1 sm:block sm:text-sm sm:text-green-500 font-semibold">
+          <p className="mt-1 block font-semibold text-sm text-green-500">
       Active
           </p>
         </a>
