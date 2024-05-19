@@ -17,7 +17,7 @@ const ProgressItem = ({cource}) => {
     <div className='flex flex-col gap-1 p-2'>
         <h2 className='font-medium'>{cource?.courceList?.name}</h2>
         <h2 className='text-[12px] text-gray-400'>{cource?.courceList?.auther}</h2>
-        <h2 className='text-[12px] text-gray-400'>{getTotalCompletedChapterPercentage(cource)}%<span className='float-right'>{cource?.completedChapter?.length}/{cource?.courceList?.chapter?.length} Chapters</span></h2>
+        <h2 className='text-[12px] text-gray-400'>{getTotalCompletedChapterPercentage(cource)<=100?getTotalCompletedChapterPercentage(cource):100}%<span className='float-right'>{cource?.completedChapter?.length<=cource?.courceList?.chapter?.length ? cource?.completedChapter?.length:cource?.courceList?.chapter?.length}/{cource?.courceList?.chapter?.length} Chapters</span></h2>
         <Progress value={getTotalCompletedChapterPercentage(cource)} className='h-[7px]'/>
 
     </div>
