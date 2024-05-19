@@ -189,12 +189,8 @@ const getSideBanner=async()=>{
       }
       
      `
-     const result=await request(MASTER_URL,query).then((resp)=>{
-       return resp;
-     }).catch(err=>{
-      toast("This Chapter is Already Completed")
-      console.log(err)
-     })
+     const result=await request(MASTER_URL,query);
+     return result;
    
    }
 

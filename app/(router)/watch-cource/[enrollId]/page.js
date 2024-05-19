@@ -20,7 +20,7 @@ const WatchCource = ({params}) => {
   },[enrolldata])
   useEffect(()=>{
     setCompletedChapter(completedChapter);
-    console.log(completedChapter)
+    console.log(completedChapter);
  },[completedChapter])
   const getUserenrolledCources=()=>{
     GlobalApi.getUserEnrollCource(params.enrollId,user?.primaryEmailAddress?.emailAddress).then(resp=>{
@@ -32,10 +32,13 @@ const WatchCource = ({params}) => {
 
   const completedChapters=(chapterId)=>{
     GlobalApi.markcompletedchapter(params.enrollId,chapterId).then(resp=>{
-      console.log(resp)
+    
+     
       if(resp){
+        console.log(resp)
         toast('✔ Marked Completed');
         getUserenrolledCources();
+        
       }
     })
   }
