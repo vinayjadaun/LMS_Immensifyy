@@ -148,7 +148,7 @@ useEffect(()=>{
 
         
            <div className={`mt-1 bg-white z-10 h-screen rounded-md p-3 ${!mobileTrue?'absolute left-[-1px] top-[-900px] transition-all ease-in-out 2s':'absolute top-[2px] left-[-10px]  transition-all ease-in-out 2000ms'}`}>
-           <div  onClick={()=>router.push('/newsletter')} className='lg:md:xl:xxl:hidden h-7 w-7 relative hover:cursor-pointer'>
+           <div  onClick={()=>{router.push('/newsletter'),setMobileTrue(!mobileTrue)}} className='lg:md:xl:xxl:hidden h-7 w-7 relative hover:cursor-pointer'>
             <Bell className='text-gray-500 sm:p-0 p-0.5 h-7 w-7 lg:md:xl:xxl:hidden md:lg:xl:xxl:absolute'></Bell>
             <div className='absolute rounded-[6px] h-3 w-3 bg-red-600 right-0 top-0 text-[8px] text-white text-center' >{news?.length}</div>
             </div>
