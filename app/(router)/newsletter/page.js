@@ -4,7 +4,7 @@ import GlobalApi from '@/app/_services/GlobalApi'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 
-const page = () => {
+const Page = () => {
 
    const[news,setnews]=useState();
   const getnewletterupdates=()=>{
@@ -72,4 +72,4 @@ const data=[
   )
 }
 
-export default page
+export default Page
