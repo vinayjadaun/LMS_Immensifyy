@@ -4,16 +4,35 @@ import React from 'react'
 
 const Live = () => {
   return (
-    <div className='grid sm:grid-cols-4 grid-cols-1 bg-white p-5 gap-1'>
-    {/* left section */}
-     <div className='col-span-2'>
-     <Image src='/panda1_prev_ui.png' alt="any" height={600} width={600}/>
-     </div>
-     {/* right section */}
-     
-     <div className='col-span-2 p-5  text-center items-center bg-white rounded-xl'>
-     <h2 className='font-bold sm:mr-[100px] mr-0 text-primary sm:mt-[150px] mt-0 sm:text-[70px] text-[50px]'>Comming Soon</h2>
-     </div>
+    <div className='bg-gray-200 h-screen'>
+     <section>
+  <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+      <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
+        <img
+          alt=""
+          src="/man.jpg"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      </div>
+
+      <div className="lg:py-24">
+        <h2 className="text-3xl font-bold sm:text-4xl">Welcome to Live Sessions</h2>
+
+        <p className="mt-4 text-gray-600">
+         In Order to Join the Live session , Please Enter the Room Id provied by the Instructor.
+        </p>
+
+        <a
+          href="https://chatting-meeting.vercel.app/"
+          className="mt-8 inline-block rounded bg-primary px-12 py-3 text-sm font-medium text-white transition hover:bg-primary focus:outline-none focus:ring focus:ring-primary"
+        >
+          Join Session Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
    </div>
    
   )
