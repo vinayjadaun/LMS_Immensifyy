@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import React, { useContext, useState } from 'react'
 import { toast } from 'sonner';
 
-const page = () => {
+const Pagr = () => {
   const{Ismember,SetIsmember}=useContext(IsmemberContext);
   const[name,setname]=useState();
   const[email,setemail]=useState();
@@ -135,4 +135,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Pagr
