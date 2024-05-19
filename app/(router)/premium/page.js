@@ -364,10 +364,10 @@ const Page = () => {
             </svg>
           </span>
 
-          <h2 className="mt-2 font-bold">Full Access</h2>
+          <h2 className="mt-2 font-bold">Payment Mode</h2>
 
           <p className=" mt-1 block font-semibold text-sm text-green-500">
-            1000+ cources
+            Online
           </p>
         </a>
 

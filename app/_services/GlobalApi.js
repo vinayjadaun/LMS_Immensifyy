@@ -1,6 +1,7 @@
 
 import request, { gql } from "graphql-request";
 import React from "react";
+import { toast } from "sonner";
 
 
 
@@ -188,8 +189,13 @@ const getSideBanner=async()=>{
       }
       
      `
-     const result=await request(MASTER_URL,query);
-     return result;
+     const result=await request(MASTER_URL,query).then((resp)=>{
+       return resp;
+     }).catch(err=>{
+      toast("This Chapter is Already Completed")
+      console.log(err)
+     })
+   
    }
 
  const getAllUserEnrolledCources=async(id)=>{
@@ -262,6 +268,27 @@ const Checkformembership=async(email)=>{
   const result=await request(MASTER_URL,query);
   return result;
 }
+
+
+const NewletterUpdates=async(email)=>{
+  const query=gql`
+  query MyQuery {
+    newsletters {
+      date
+      description
+      id
+      topic
+      image {
+        url
+      }
+      author
+    }
+  }
+  `
+  const result=await request(MASTER_URL,query);
+  return result;
+}
+
 export default{
     getAllCourcesList,
     getSideBanner,
@@ -272,5 +299,6 @@ export default{
     markcompletedchapter,
     getAllUserEnrolledCources,
     Addnewmember,
-    Checkformembership
+    Checkformembership,
+    NewletterUpdates
 }
