@@ -11,6 +11,7 @@ import GlobalApi from '../_services/GlobalApi'
 import { Island_Moments } from 'next/font/google'
 import { OnFilter } from '../context/OnFilter'
 import { NewsletterContext } from '../context/NewsletterContext'
+import { ColorContext } from '../context/ColorContext'
 
 const Layout = ({children}) => {
   const [searchValue,SetSearchValue]=useState([]);
@@ -19,6 +20,7 @@ const Layout = ({children}) => {
   const [filter,SetFilter]=useState();
   const [Ismember,SetIsmember]=useState(false);
   const[news,Setnews]=useState();
+  const[Color,SetColor]=useState(0);
   useState(()=>{
     SetIsmember(Ismember)
   },[Ismember])
@@ -31,13 +33,14 @@ const Layout = ({children}) => {
       <OnFilter.Provider value={{filter,SetFilter}}>
   <SearchContext.Provider value={{searchValue,SetSearchValue}}>
     <NewsletterContext.Provider value={{news,Setnews}}>
+      <ColorContext.Provider value={{Color,SetColor}}>
     <div>
       <div className='sm:w-64 sm:block hidden fixed'>
     <SideNav/> </div>
 
     <div className='sm:ml-64'>
         <Header/>
-       {children}</div> </div></NewsletterContext.Provider></SearchContext.Provider>
+       {children}</div> </div></ColorContext.Provider></NewsletterContext.Provider></SearchContext.Provider>
        </OnFilter.Provider>
        </Membership.Provider>
        </IsmemberContext.Provider>

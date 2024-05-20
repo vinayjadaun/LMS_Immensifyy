@@ -273,6 +273,7 @@ const NewletterUpdates=async(email)=>{
       date
       description
       id
+      meeting
       topic
       image {
         url
