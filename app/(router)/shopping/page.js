@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import React, { useContext, useEffect } from 'react'
 
-const shop = () => {
+const Shop = () => {
   const{Color,SetColor}=useContext(ColorContext);
   const hel='#7efd11'
 
@@ -28,4 +28,4 @@ const shop = () => {
   )
 }
 
-export default shop
+export default Shop
