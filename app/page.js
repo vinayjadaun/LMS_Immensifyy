@@ -1,6 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button";
 import { UserButton, useUser } from "@clerk/nextjs";
+import { Loader, LoaderCircleIcon, LoaderIcon } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -23,8 +24,8 @@ export default function Home() {
 
  
   return (
-  <div>hello
-    <UserButton afterSignOutUrl="/"/>
-     <Button>hello</Button></div>
+  <div className="h-[700px] max-w-dvh flex items-center justify-center">
+    <LoaderCircleIcon className="h-[50px] w-[50px] animate-spin"/>
+    </div>
   );
 }

@@ -1,5 +1,5 @@
 "use client"
-import { BadgeIcon, Bell, BellDot, BookOpen, GraduationCap, LayoutGrid, ListVideo, Mail, Menu, Option, Search, ShoppingBag } from 'lucide-react'
+import { BadgeIcon, Bell, BellDot, BookOpen, GraduationCap, LayoutGrid, ListVideo, Mail, Menu, Option, Search, ShoppingBag, Sparkles } from 'lucide-react'
 import React, { useContext, useEffect, useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { UserButton, useUser } from '@clerk/nextjs'
@@ -79,7 +79,14 @@ useEffect(()=>{
           auth:true,
       },
       {
-          id:2,
+        id:2,
+        name:'AI Interview',
+        icon: Sparkles,
+        path:'/interview',
+        auth:true,
+    },
+      {
+          id:3,
           name:'Store',
           icon:ShoppingBag,
           path:'/shopping',
@@ -87,7 +94,7 @@ useEffect(()=>{
       }
       ,
       {
-          id:3,
+          id:4,
           name:'Membership',
           icon:BadgeIcon,
           path:'/premium',
@@ -95,21 +102,21 @@ useEffect(()=>{
       }
       ,
       {
-          id:4,
+          id:5,
           name:'Be instructor',
           icon:GraduationCap,
           path:'/instructor',
           auth:true,
       },
       {
-          id:5,
+          id:6,
           name:'Newletter',
           icon:Mail,
           path:'/newsletter',
           auth:true,
       },
       {
-          id:6,
+          id:7,
           name:'Live Session',
           icon:ListVideo,
           path:'/Live',
@@ -147,7 +154,7 @@ useEffect(()=>{
        <div className='flexitems-center justify-center float-left bg-white absolute w-[320px] top-[70px]'>
 
         
-           <div className={`mt-1 bg-white z-10 h-screen rounded-md p-3 ${!mobileTrue?'absolute left-[-1px] top-[-900px] transition-all ease-in-out 2s':'absolute top-[2px] left-[-10px]  transition-all ease-in-out 2000ms'}`}>
+           <div className={`mt-1 bg-white z-10 h-screen rounded-md p-3 ${!mobileTrue?'absolute left-[-1000px] top-[-1px] transition-all ease-in-out 2s':'absolute top-[2px] left-[-20px]  transition-all ease-in-out 2000ms'}`}>
            <div  onClick={()=>{router.push('/newsletter'),setMobileTrue(!mobileTrue)}} className='lg:md:xl:xxl:hidden h-7 w-7 relative hover:cursor-pointer'>
             <Bell className='text-gray-500 sm:p-0 p-0.5 h-7 w-7 lg:md:xl:xxl:hidden md:lg:xl:xxl:absolute'></Bell>
             <div className='absolute rounded-[6px] h-3 w-3 bg-red-600 right-0 top-0 text-[8px] text-white text-center' >{news?.length}</div>
