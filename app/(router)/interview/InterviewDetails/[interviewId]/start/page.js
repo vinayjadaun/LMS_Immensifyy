@@ -26,7 +26,7 @@ const Start = ({params}) => {
         setmockinterviewquestion(jsonMockResp)
         setinterviewdata(result[0]);
     }
-  return mockinterviewquestion&& (
+  return mockinterviewquestion && (
     <div className='bg-white'>
         <div className='grid grid-cols-1 gap-10 md:grid-cols-2 '>
             <Question mockinterviewquestion={mockinterviewquestion}/>

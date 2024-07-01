@@ -27,7 +27,7 @@ const InterviewDetails= ({params}) => {
     }
   return (
     <div className='bg-white my-0 mt-2 py-2 flex justify-center min-h-[660px] flex-col items-center'>
-        <h2 className='font-bold text-2xl'>Let's Get Started</h2>
+        <h2 className='font-bold text-2xl'>Let&apos;s Get Started</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 p-[150px]'>
 
         <div className='flex flex-col gap-8 my-5 '>
@@ -57,7 +57,7 @@ const InterviewDetails= ({params}) => {
             </>
             }
               <div className='flex mt-8 rounded-lg text-white justify-end items-end'>
-                <Link href={params.interviewId+'/start'}>
+                <Link href={params.interviewId +'/start'}>
             <Button>Start</Button>
             </Link>
         </div>
