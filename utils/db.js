@@ -4,6 +4,7 @@ import * as schema from './schema.js'
 
 export const sql = neon(process.env.NEXT_PUBLIC_DRIZZLE_DATABASE_URL);
 export const db = drizzle(sql,{schema});
+console.log("success");
 
 
 
