@@ -46,7 +46,7 @@ const Record = () => {
     <Button className='my-10' variant='outline' onClick={()=>saveUserAnswer()}>
         {isRecording?
         <h2 className='text-red-600 flex flex-row gap-2'>
-            <Mic/> 'Recording...'
+            <Mic/> Recording...
         </h2>
     :'Record Answer'}</Button>
     <Button className='text-white' onClick={()=>console.log(userAnswer)}>Show User Answer</Button>
