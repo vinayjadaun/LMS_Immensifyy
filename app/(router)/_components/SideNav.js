@@ -81,7 +81,7 @@ const SideNav = () => {
             {menu.map((item,index)=>item.auth&&(
                
                <Link key={index} href={item.path}> <div className={`flex gap-3 mt-2 p-3 rounded-sm text-[20px] items-center text-gray-500 
-                cursor-pointer hover:bg-primary group hover:text-white transition-all ease-in-out duration-200 ${path.includes(item.path)&&'bg-primary rounded-md text-white'}`}>
+                cursor-pointer hover:bg-primary group hover:rounded-xl hover:text-white transition-all ease-in-out duration-200 ${path.includes(item.path)&&'bg-primary rounded-xl text-white'}`}>
                      
                     <item.icon  className='group-hover:animate-bounce'/>
                     <h2 >{item.name}</h2>

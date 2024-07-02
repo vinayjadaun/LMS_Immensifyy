@@ -77,7 +77,7 @@ const AddNewInterview = () => {
     }
   return (
     <div>
-        <div className='p-10 border rounded-lg bg-gray-200 hover:scale-105 hover:shadow-md cursor-pointer transition-all' onClick={()=>setopen(true)}>
+        <div className='p-10 border rounded-xl bg-gray-200 hover:scale-105 hover:shadow-md cursor-pointer transition-all' onClick={()=>setopen(true)}>
             <h2 className='text-lg text-center'>+Add New</h2>
             
         </div>
@@ -108,7 +108,7 @@ const AddNewInterview = () => {
         <div className='flex gap-5 justify-end'>
             <Button variant="ghost" onClick={()=>setopen(false)}>Cancel</Button>
             <Button type='submit' disabled={loading} className='text-white border rounded-e-lg'>
-                {loading?<><LoaderCircle className='animate-spin'/>Generating from AI</>: 
+                {loading?<><LoaderCircle className='animate-spin'/> Generating from AI</>: 
                 'Start Interview'}
             </Button>
         </div>
