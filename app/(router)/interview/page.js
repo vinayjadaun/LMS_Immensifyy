@@ -7,7 +7,7 @@ import { IsmemberContext } from '@/app/context/IsmemberContext'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
 
-const interview = () => {
+const Interview = () => {
   const{Ismember,SetIsmember}=useContext(IsmemberContext);
   const router=useRouter();
   return (
@@ -33,4 +33,4 @@ const interview = () => {
   )
 }
 
-export default interview
+export default Interview
