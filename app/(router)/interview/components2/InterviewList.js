@@ -34,9 +34,9 @@ const InterviewList = () => {
         <h2 className='font-bold text-2xl my-5 mt-5 '>Previous Interviews</h2>
         <div  className='grid grid-col grid-cols-1 gap-5 my-3 md:grid-cols-2 lg:grid-cols-3'>
             {interviewlist&&interviewlist.map((item,index)=>(
-                 <div>
+              
                 <InterviewCard key={index} item={item}/>
-                  </div>
+                
 
                 
             ))}
