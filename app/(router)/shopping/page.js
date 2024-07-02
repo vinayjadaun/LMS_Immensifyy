@@ -17,7 +17,7 @@ const Shop = () => {
      {/* right section */}
      
      <div className='col-span-2 p-5  text-center items-center bg-white rounded-xl'>
-     <h2 className={`font-bold m-5 sm:mr-[100px] mr-0 ${Color===0?'text-[#28fffb]':Color==1?'text-[#ff1414]':Color==2?'text-[#d8ff2d]':Color==3?'text-[#143bff]':Color==4?'text-[#4aff86]':null} sm:mt-[150px] mt-0 sm:text-[70px] text-[50px]`}>Comming Soon</h2>
+     <h2 className={`font-bold m-5 sm:mr-[100px] mr-0 ${Color===0?'text-[#28fffb]':Color==1?'text-[#ff1414]':Color==2?'text-[#d8ff2d]':Color==3?'text-[#143bff]':Color==4?'text-[#4aff86]':null} sm:mt-[150px] mt-0 sm:text-[70px] text-[50px]`}>Coming Soon</h2>
      <div className='m-8 text-white' onClick={()=>SetColor(1)}><Button >Red</Button></div>
      <div className='m-8 text-white' onClick={()=>SetColor(2)}><Button >Yellow</Button></div>
      <div className='m-8 text-white' onClick={()=>SetColor(3)}><Button >Blue</Button></div>
