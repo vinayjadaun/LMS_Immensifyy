@@ -20,14 +20,14 @@ const Live = () => {
         <h2 className="text-3xl font-bold sm:text-4xl">Welcome to Live Sessions</h2>
 
         <p className="mt-4 text-gray-600">
-         In Order to Join the Live session , Please Enter the Room Id provied by the Instructor.
+         In Order to Create the Live session , Please Enter the Room Id of your choice then share the url.
         </p>
 
         <a
           href="https://chatting-meeting.vercel.app/"
           className="mt-8 inline-block rounded bg-primary px-12 py-3 text-sm font-medium text-white transition hover:bg-primary focus:outline-none focus:ring focus:ring-primary"
         >
-          Join Session Now
+          Create Session Now
         </a>
       </div>
     </div>
