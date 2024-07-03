@@ -105,7 +105,7 @@ const getSideBanner=async()=>{
         ) {
           id
         }
-        publishManyUserEnrollCourcesConnection(to: PUBLISHED)  {
+        publishManyUserEnrollCourcesConnection  {
           edges {
             node {
               id
