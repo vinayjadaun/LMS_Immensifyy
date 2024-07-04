@@ -13,7 +13,7 @@ const Interview = () => {
   return (
     <div className='bg-white p-1'>
        <Headerr/>
-    {Ismember?
+    {!Ismember?
     <>
    
     <div className='p-10'>
