@@ -14,12 +14,12 @@ const Question = ({mockinterviewquestion,activeindex,setactiveindex}) => {
   return (
     <div className='p-5 border-[2px] rounded-lg'>
         <div className='grid grid-cols-2 md:grid-cols-3 mb-5 lg:grid-cols-4 gap-5'>
-            {mockinterviewquestion.map((Ques,index)=>(
+            {Array.isArray(mockinterviewquestion) && mockinterviewquestion.map((Ques,index)=>(
               <h2 key={index} onClick={()=>setactiveindex(index)} className={`p-2 rounded-[20px] text-xs md:text-sm text-center cursor-pointer ${activeindex==index?'bg-primary text-white':'bg-gray-300 text-black'}`}>Question #{index+1}</h2>
            ) )}
         </div>
-        <h2 className='my-7 text-sm md:text-md'>Q.{activeindex+1} : {mockinterviewquestion[activeindex].question}</h2>
-        <Volume2Icon className='cursor-pointer' onClick={()=>texttospeech(mockinterviewquestion[activeindex].question)}/>
+        <h2 className='my-7 text-sm md:text-md'>Q.{activeindex+1} : {mockinterviewquestion[activeindex]?.question}</h2>
+        <Volume2Icon className='cursor-pointer' onClick={()=>texttospeech(mockinterviewquestion[activeindex]?.question)}/>
         <div className='border rounded-lg p-5 bg-blue-100 mt-5'>
           <h2 className='flex gap-2 items-center text-blue-700'>
           <Lightbulb/>
